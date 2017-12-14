@@ -1,21 +1,16 @@
 import React from 'react'
-import { EventEmitter } from '../fire-event-store-react'
 
 const ControlPanel = props => (
-  <EventEmitter stream="counter-events">
-    { emit => (
-      <div>
-        <button
-          className="button"
-          onClick={ () => emit({type: "INCREMENT"}) }
-        >+</button>
-        <button
-          className="button"
-          onClick={ () => emit({type: "DECREMENT"}) }
-        >-</button>
-      </div>
-    )}
-  </EventEmitter>
+  <div>
+    <button
+      className="button"
+      onClick={ () => console.log("Add 1") }
+    >+</button>
+    <button
+      className="button"
+      onClick={ () => console.log("Take 1") }
+    >-</button>
+  </div>
 )
 
 export default ControlPanel
